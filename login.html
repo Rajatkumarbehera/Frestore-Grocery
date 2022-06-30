@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign in</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign up</button>
+            </div>
+            
+            <form action="" class="sign-in-form" id="login">
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check">Remember password</label>
+                </div>
+
+                <input type="submit" value="login" class="btn">
+
+                <div class="social-media">
+                    <p class="social-text">Or Sign in with</p>
+                    <a href="" class="social-icon" id="icon1"><i class="fa-brands fa-google"></i></a>
+                    <a href="" class="social-icon" id="icon2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="" class="social-icon" id="icon3"><i class="fa-brands fa-instagram"></i></i></a>
+                </div>
+
+                <p class="account-text">Don't have an account? <button type="button" onclick="register()" id="sign-up-btn" class="sign-up-btn">Sign up</button></p>
+            </form>
+
+            <form action="" class="sign-up-form" id="register">
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Create a password" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Confirm a password" required>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" name="check" id="check1">
+                    <label for="check1">I accept all terms and conditions.</label>
+                </div>
+
+                <input type="submit" value="register" class="btn">
+                <p class="account-text1">Already have an account? <button type="button" onclick="login()" id="sign-in-btn" class="sign-in-btn">Sign in</a></button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let log = document.querySelector('#login');
+        let reg = document.querySelector('#register');
+        let btn = document.querySelector('#btn');
+
+        function register() {
+            log.style.left = '-25rem';
+            reg.style.left = '0.01rem';
+            btn.style.left = '110px';
+        }
+
+        function login() {
+            log.style.left = '0.01rem';
+            reg.style.left = '25rem';
+            btn.style.left = '0';
+        }
+    </script>
+</body>
+</html>

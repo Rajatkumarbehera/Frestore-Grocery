@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Roboto:wght@100&display=swap');
+
+:root {
+    --blue: #3D57FF;
+    --black: #2c2c54;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--blue);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+}
+
+/* header design starts */
+
+.header-1 {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.logo {
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.logo i {
+    padding-right: 0.5rem;
+    color: var(--blue);
+}
+
+.header-1 .search-box-container {
+    display: flex;
+    height: 5rem;
+}
+
+.header-1 .search-box-container #search-box {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #333;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    text-transform: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.header-1 .search-box-container label {
+    height: 100%;
+    width: 6rem;
+    font-size: 2rem;
+    line-height: 5rem;
+    color: #fff;
+    background-color: var(--blue);
+    text-align: center;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.header-1 .search-box-container label:hover {
+    background: var(--black);
+}
+
+.header-2 {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--black);
+    padding: 0.8rem 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+.header-2 .navbar a {
+    padding: 0.5rem 1.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-radius: 0.5rem;
+}
+
+.header-2 .navbar a:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+.header-2 .icons a {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding-left: 1rem;
+}
+
+.header-2 .icons a:hover {
+    color: var(--blue);
+}
+
+/* home design starts */
+
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .image {
+    flex: 1 1 40rem;
+    padding-top: 5rem;
+}
+
+.home .image img {
+    width: 100%;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: #666;
+}
+
+.home .content h3 {
+    font-size: 5rem;
+    color: var(--black);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--blue);
+    color: #fff;
+    padding: .5rem 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--black);
+}
+
+/* banner design starts */
+
+.banner-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.banner-container .banner {
+    flex: 1 1 40rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-container .banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-container .banner:hover img {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.banner-container .banner .content {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+}
+
+.banner-container .banner .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.banner-container .banner .content p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* category design starts */
+
+.category .box-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.category .box-container .box {
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 2rem;
+    flex: 1 1 25rem;
+}
+
+.category .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.category .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 0.5rem 0;
+}
+
+.category .box-container .box img {
+    width: 15rem;
+    margin: 1rem 0;
+}
+
+.category .box-container .box:hover img {
+    transform: scale(1.05);
+}
+
+.category .box-container .box .btn {
+    display: block;
+}
+
+/* product design starts */
+
+.product .box-container-one {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.product .box-container-one .box {
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 2rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product .box-container-one .box .discount {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    background: rgba(0, 255, 0, 0.1);
+    color: var(--blue);
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: green;
+}
+
+.product .box-container-one .box .icons {
+    position: absolute;
+    top: 0.5rem;
+    right: -5rem;
+}
+
+.product .box-container-one .box:hover .icons {
+    right: 1rem;
+}
+
+.product .box-container-one .box .icons a {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    color: var(--black);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    margin-top: 0.7rem;
+}
+
+.product .box-container-one .box .icons a:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+.product .box-container-one .box img {
+    height: 10rem;
+    margin-top: 3rem;
+}
+
+.product .box-container-one .box:hover img {
+    transform: scale(1.2);
+}
+
+.product .box-container-one .box h3 {
+    color: var(--black);
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+}
+
+.product .box-container-one .box .starprice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product .box-container-one .box .starprice .stars,
+.product .box-container-one .box .starprice .price {
+    flex: 1 1 8rem;
+}
+
+.stars {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	color: #ddd;
+    padding: 1rem 0.1rem;
+}
+
+.stars input {
+	display: none;
+}
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input:checked + label,
+.stars input:checked + label ~ label {
+    color: green;
+    cursor: pointer;
+}
+
+.product .box-container-one .box .price {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #333;
+    padding: 0.5rem 0;
+}
+
+.product .box-container-one .box .price span{
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product .box-container-one .box .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.product .box-container-one .box .quantity span {
+    font-size: 1.3rem;
+    padding: 0 0.7rem;
+}
+
+.product .box-container-one .box .quantity input {
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--black);
+    padding: 0.2rem;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.product .box-container-one .box .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product .box-container-one .box .buttons a{
+    flex: 1 1 8rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.product .box-container-one .box .buttons .cart {
+    background: green;
+}
+
+.product .box-container-one .box .buttons .cart:hover {
+    background: var(--black);
+}
+
+/* deal design starts */
+
+.deal {
+    background: url('images/deal-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.deal .content {
+    max-width: 50rem;
+}
+
+.deal .content .title {
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.deal .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: #333;
+    text-transform: none;
+}
+
+.deal .content .count-down {
+    display: flex;
+    padding: 0.5rem 0;
+    gap: 1rem;
+}
+
+.deal .content .count-down .box {
+    width: 7rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+.deal .content .count-down .box h3 {
+    color: var(--black);
+    background: #fff;
+    height: 5rem;
+    line-height: 5rem;
+    width: 100%;
+    font-size: 4rem;
+}
+
+.deal .content .count-down .box span {
+    display: block;
+    background: var(--black);
+    color: #fff;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* contact design starts */
+
+.contact form {
+    text-align: center;
+    border: 0.3rem solid rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea {
+    padding: 1rem;
+    font-size: 1.7rem;
+    background: #f7f7f7;
+    text-transform: none;
+    margin: 1rem 0;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+    width: 49%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 0;
+}
+
+.contact form textarea {
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+
+/* newsletter design starts */
+
+.newsletter {
+    background: url('images/newsletter-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.newsletter h3 {
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.newsletter form {
+    max-width: 55rem;
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.newsletter form .box {
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+
+.newsletter form .btn {
+    margin-top: 0;
+}
+
+/* footer design starts */
+
+.footer .box-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box p {
+    font-size: 1.3rem;
+    color: #666;
+    padding: 0.7rem 0;
+}
+
+.footer .box-container .box h2 {
+    margin-top: 2.5rem;
+}
+
+.footer .box-container .box .share a {
+    padding: 0;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.footer .box-container .box .links {
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links a{
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.footer .box-container .box .links a:hover {
+    color: var(--blue);
+}
+
+.footer .box-container .box .links img {
+    width: 100%;
+}
+
+.footer .credit {
+    padding-top: 1.5rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.footer .credit span {
+    color: var(--blue);
+}
+
+
+
+
+
+
+
+
+
+
+/* responsive media query */
+
+@media(max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .footer .box-container .box .links img {
+        width: 30%;
+    }
+}
+
+@media(max-width:991px) {
+    .header-1,
+    .header-2 {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .footer .box-container .box .links img {
+        width: 30%;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-bar {
+        display: initial;
+    }
+
+    .header-2 .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        padding: 1rem 2rem;
+        display: none;
+    }
+
+    .header-2 .navbar.active {
+        display: initial;
+    }
+
+    .header-2 .navbar a {
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+        background: #fff;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+
+    .deal {
+        background-position: left;
+    }
+
+    .deal .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .deal .content .count-down {
+        justify-content: center;
+    }
+
+    .conatct form .inputBox input {
+        width: 100%;
+    }
+
+    .newsletter h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .header-1 {
+        flex-flow: column;
+    }
+
+    .header-1 .search-box-container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+
+    .deal .content .count-down .box h3 {
+        font-size: 4rem;
+    }
+
+    .deal .content .count-down .box span {
+        font-size: 1.5rem;
+    }
+}
