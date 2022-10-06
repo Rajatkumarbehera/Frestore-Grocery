@@ -25,7 +25,7 @@ window.onscroll = () => {
 
 // handling the countdown timer
 
-let countDate = new Date('july 15, 2022 00:00:00').getTime();
+let countDate = new Date('january 1, 2023 00:00:00').getTime();
 
 function countDown() {
     let now = new Date().getTime();
